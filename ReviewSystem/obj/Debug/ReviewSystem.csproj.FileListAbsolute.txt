@@ -1,0 +1,15 @@
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\ReviewSystem.exe.config
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\ReviewSystem.exe
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\ReviewSystem.pdb
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csprojAssemblyReference.cache
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Properties.Resources.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csproj.GenerateResource.cache
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.exe
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.pdb
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.adminLoginForm.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.adminPanel.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csproj.CopyComplete
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.CustomerReview.resources

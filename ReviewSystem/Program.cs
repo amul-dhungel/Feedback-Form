@@ -18,7 +18,8 @@ namespace ReviewSystem
             Application.SetCompatibleTextRenderingDefault(false);
            //Application.Run(new AdminLoginForm());
             //Application.Run(new AdminPanel());
-            Application.Run(new CustomerReview());
+            //Application.Run(new CustomerReview());
+            Application.Run(new Report());
         }
 
     }

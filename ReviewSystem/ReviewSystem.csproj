@@ -62,6 +62,7 @@
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPanelClass.cs" />
+    <Compile Include="FeedBackRatingVariables.cs" />
     <Compile Include="FeedbackClass.cs" />
     <Compile Include="CustomerReviewClass.cs" />
     <Compile Include="CustomerReview.cs">
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="CustomerReview.Designer.cs">
       <DependentUpon>CustomerReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

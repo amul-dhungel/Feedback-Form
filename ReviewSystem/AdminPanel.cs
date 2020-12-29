@@ -184,6 +184,10 @@ namespace ReviewSystem
             
         }
 
-    
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report obj = new Report(); // moving to admin panel window
+            obj.Show();
+        }
     }
 }

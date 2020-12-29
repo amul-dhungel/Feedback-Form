@@ -106,7 +106,7 @@ namespace ReviewSystem
                 r.CustomerEmail = txtEmail.Text;
                 r.CustomerNumber = txtNumber.Text;
                 DateTime date = DateTime.Now;  //get current datetime 
-                r.date = date.Date.Month + "/" + date.Date.Day + "/" + date.Date.Year;
+                r.date = date.ToString("yyyy - MM - dd");
 
                 string flag = r.Save(r);
                 if (flag == "Success")

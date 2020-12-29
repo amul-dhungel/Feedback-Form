@@ -73,13 +73,57 @@ namespace ReviewSystem
             dataGridView1.DataSource = dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            BindGrid();
-        }
+      
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            FeedbackClass obj = new FeedbackClass();
+            DateTime temp;
+            DateTime oDate;
+            List<FeedbackClass> listStudents = obj.List();
+            DateTime[] arr1 = new DateTime[listStudents.Count];
+            for (int i = 0; i < listStudents.Count; i++)
+            {
+                var id = listStudents[i].TotalRating;
+                var date = listStudents[i].date;
+                oDate = DateTime.Parse(date);
+                Console.WriteLine(oDate);
+                arr1[i] = oDate;
+
+            }
+            int l = arr1.Length;
+            for (int i = 0; i < l; i++)
+            {
+                for (int j = 0; j < l - 1; j++)
+                {
+                    if (arr1[j].CompareTo(arr1[j + 1]) > 0)
+                    {
+                        temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp;
+                    }
+                }
+            }
+            List<FeedbackClass> listStudents2 = new List<FeedbackClass>();
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                for (int j = 0; j < listStudents.Count; j++)
+                {
+                    var id = listStudents[j].TotalRating;
+                    DateTime name = DateTime.Parse(listStudents[j].date);
+                    if (arr1[i] == name)
+                    {
+                        listStudents2.Add(listStudents[j]);
+                    }
+                }
+            }
+            DataTable dt = Utility.ConvertToDataTable(listStudents2);
+            dataGridView1.DataSource = dt;
 
         }
     }

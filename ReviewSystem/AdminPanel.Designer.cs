@@ -36,19 +36,20 @@ namespace ReviewSystem
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnReport = new System.Windows.Forms.Button();
+            this.btnGraph = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCriteria
             // 
-            this.txtCriteria.Location = new System.Drawing.Point(96, 78);
+            this.txtCriteria.Location = new System.Drawing.Point(96, 65);
             this.txtCriteria.Name = "txtCriteria";
             this.txtCriteria.Size = new System.Drawing.Size(179, 22);
             this.txtCriteria.TabIndex = 0;
             // 
             // btnAddCriteria
             // 
-            this.btnAddCriteria.Location = new System.Drawing.Point(296, 76);
+            this.btnAddCriteria.Location = new System.Drawing.Point(296, 65);
             this.btnAddCriteria.Name = "btnAddCriteria";
             this.btnAddCriteria.Size = new System.Drawing.Size(101, 26);
             this.btnAddCriteria.TabIndex = 1;
@@ -58,14 +59,14 @@ namespace ReviewSystem
             // 
             // txtRating
             // 
-            this.txtRating.Location = new System.Drawing.Point(96, 123);
+            this.txtRating.Location = new System.Drawing.Point(96, 109);
             this.txtRating.Name = "txtRating";
             this.txtRating.Size = new System.Drawing.Size(179, 22);
             this.txtRating.TabIndex = 2;
             // 
             // btnAddRating
             // 
-            this.btnAddRating.Location = new System.Drawing.Point(296, 123);
+            this.btnAddRating.Location = new System.Drawing.Point(296, 109);
             this.btnAddRating.Name = "btnAddRating";
             this.btnAddRating.Size = new System.Drawing.Size(101, 26);
             this.btnAddRating.TabIndex = 3;
@@ -75,9 +76,9 @@ namespace ReviewSystem
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(468, 101);
+            this.btnRefresh.Location = new System.Drawing.Point(338, 404);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(80, 30);
+            this.btnRefresh.Size = new System.Drawing.Size(93, 34);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -86,29 +87,40 @@ namespace ReviewSystem
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(96, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(603, 233);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(599, 101);
+            this.btnReport.Location = new System.Drawing.Point(708, 226);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(80, 30);
+            this.btnReport.Size = new System.Drawing.Size(80, 38);
             this.btnReport.TabIndex = 6;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // btnGraph
+            // 
+            this.btnGraph.Location = new System.Drawing.Point(708, 291);
+            this.btnGraph.Name = "btnGraph";
+            this.btnGraph.Size = new System.Drawing.Size(80, 37);
+            this.btnGraph.TabIndex = 7;
+            this.btnGraph.Text = "Graph";
+            this.btnGraph.UseVisualStyleBackColor = true;
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGraph);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRefresh);
@@ -133,5 +145,6 @@ namespace ReviewSystem
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnGraph;
     }
 }

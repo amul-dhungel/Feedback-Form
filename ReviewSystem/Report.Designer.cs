@@ -29,21 +29,11 @@ namespace ReviewSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(335, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 39);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Sort By Date";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -67,15 +57,25 @@ namespace ReviewSystem
             this.label1.TabIndex = 3;
             this.label1.Text = "Table Data";
             // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(328, 393);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(123, 45);
+            this.btnSort.TabIndex = 4;
+            this.btnSort.Text = "Sort by Date";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
             this.Name = "Report";
             this.Text = "Report";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -85,8 +85,8 @@ namespace ReviewSystem
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSort;
     }
 }

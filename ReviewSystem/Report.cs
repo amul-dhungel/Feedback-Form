@@ -41,14 +41,12 @@ namespace ReviewSystem
                 foreach (PropertyDescriptor prop in properties)
                 {
                     table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
-                    Console.WriteLine(prop.Name.ToString());
                 }
                 if (data != null)
                 {
                     foreach (T item in data)
                     {
                         DataRow row = table.NewRow();
-                        Console.WriteLine("hi");
                         foreach (PropertyDescriptor prop in properties)
                             row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
                         table.Rows.Add(row);
@@ -69,6 +67,7 @@ namespace ReviewSystem
         {
             FeedbackClass obj = new FeedbackClass();
             List<FeedbackClass> listReview = obj.List();
+            Console.WriteLine(listReview.ToList());
             DataTable dt = Utility.ConvertToDataTable(listReview);
             dataGridView1.DataSource = dt;
         }
@@ -92,7 +91,6 @@ namespace ReviewSystem
                 var id = listStudents[i].TotalRating;
                 var date = listStudents[i].date;
                 oDate = DateTime.Parse(date);
-                Console.WriteLine(oDate);
                 arr1[i] = oDate;
 
             }

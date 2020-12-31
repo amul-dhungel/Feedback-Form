@@ -113,6 +113,7 @@ namespace ReviewSystem
             this.btnGraph.TabIndex = 7;
             this.btnGraph.Text = "Graph";
             this.btnGraph.UseVisualStyleBackColor = true;
+            this.btnGraph.Click += new System.EventHandler(this.btnGraph_Click);
             // 
             // AdminPanel
             // 

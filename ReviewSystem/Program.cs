@@ -17,9 +17,10 @@ namespace ReviewSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            //Application.Run(new AdminLoginForm());
-            //Application.Run(new AdminPanel());
+            Application.Run(new AdminPanel());
             //Application.Run(new CustomerReview());
-            Application.Run(new Report());
+            //Application.Run(new Report());
+            //Application.Run(new Graph());
         }
 
     }

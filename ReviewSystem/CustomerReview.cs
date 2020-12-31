@@ -117,11 +117,6 @@ namespace ReviewSystem
                     o.dissastisfied = 0;
                     o.average = 0;
                     o.excellent = 0;
-                    //foreach (DataGridViewCell cell in dataGridView1.SelectAll())
-                    //{
-                    //    cell.Value = false;
-                    //}
-                    
                     
                 }
 

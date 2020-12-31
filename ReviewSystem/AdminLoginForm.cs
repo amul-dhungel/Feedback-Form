@@ -35,5 +35,11 @@ namespace ReviewSystem
                 MessageBox.Show("Incorrect username or password");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerReview obj = new CustomerReview();
+            obj.Show();
+        }
     }
 }

@@ -14,3 +14,4 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\Newtonsoft.Json.x
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csproj.CopyComplete
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.CustomerReview.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Report.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Graph.resources

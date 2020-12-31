@@ -69,11 +69,16 @@ namespace ReviewSystem
                 DataTable table = new DataTable();
                 table.Columns.Add("Criterias");
  
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < data.Count; i++)
                 {
                     Console.WriteLine(data[0].ToString());
                     
                     table.Rows.Add(data[i].ToString());
+                   
+                }
+
+                for (int i = 0; i < data1.Count; i++)
+                {
                     table.Columns.Add(data1[i].ToString());
                 }
          
@@ -186,7 +191,13 @@ namespace ReviewSystem
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Report obj = new Report(); // moving to admin panel window
+            Report obj = new Report(); // moving to table panel window
+            obj.Show();
+        }
+
+        private void btnGraph_Click(object sender, EventArgs e)
+        {
+            Graph obj = new Graph(); // moving to graph panel window
             obj.Show();
         }
     }

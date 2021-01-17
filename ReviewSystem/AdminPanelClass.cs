@@ -32,7 +32,7 @@ namespace ReviewSystem
         }
 
         // Read data in the form of list
-        public List<string> List()
+        public List<string> ListCriteria()
         {
             string d = AdminPanel.Utility.ReadFromTextFile(_filePathCriteria);
             if (d != null)
@@ -43,7 +43,7 @@ namespace ReviewSystem
             return null;
         }
 
-        public List<string> List1()
+        public List<string> ListRating()
         {
             string d = AdminPanel.Utility.ReadFromTextFile(_filePathRating);
             if (d != null)

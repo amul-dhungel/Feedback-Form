@@ -17,6 +17,7 @@ namespace ReviewSystem
             InitializeComponent();
         }
 
+        // Login session of the admin panel
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text; // fetching data from username field
@@ -26,7 +27,7 @@ namespace ReviewSystem
 
             if (username == "admin" && password == "admin")
             {
-                AdminPanel obj = new AdminPanel(); // moving to admin panel window
+                AdminPanel obj = new AdminPanel(); // navigating to admin panel window
                 obj.Show();
 
             }
@@ -36,7 +37,14 @@ namespace ReviewSystem
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void AdminLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // Navigates to feedback panel
+        private void btnFeedback_Click(object sender, EventArgs e) 
         {
             CustomerReview obj = new CustomerReview();
             obj.Show();

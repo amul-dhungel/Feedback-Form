@@ -175,9 +175,9 @@ namespace ReviewSystem
         private void BindGrid()
         {
             AdminPanelClass obj = new AdminPanelClass();
-            List<string> listReview = obj.List();
-            List<string> listReview1 = obj.List1();
-            DataTable dt = Utility.ConvertToDataTable(listReview,listReview1);
+            List<string> listReviewCriteria = obj.ListCriteria();
+            List<string> listReviewRating = obj.ListRating();
+            DataTable dt = Utility.ConvertToDataTable(listReviewCriteria,listReviewRating);
             dataGridView1.DataSource = dt;
 
         }

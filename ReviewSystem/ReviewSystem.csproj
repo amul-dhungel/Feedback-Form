@@ -78,7 +78,6 @@
     <Compile Include="Graph.Designer.cs">
       <DependentUpon>Graph.cs</DependentUpon>
     </Compile>
-    <Compile Include="GraphClass.cs" />
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
     </Compile>

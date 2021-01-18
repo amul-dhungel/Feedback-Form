@@ -36,11 +36,23 @@
     <Reference Include="FlatButton">
       <HintPath>..\..\..\..\Downloads\FlatButton.dll</HintPath>
     </Reference>
+    <Reference Include="JDragControl">
+      <HintPath>..\..\..\..\Downloads\JDragControl.dll</HintPath>
+    </Reference>
     <Reference Include="JImageButton">
       <HintPath>..\..\..\..\Downloads\JImageButton.dll</HintPath>
     </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>..\..\..\..\Downloads\JMaterialTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>..\..\..\..\Downloads\JMetroTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="JTextBox">
       <HintPath>..\..\..\..\Downloads\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox2">
+      <HintPath>..\..\..\..\Downloads\JTextBox2.dll</HintPath>
     </Reference>
     <Reference Include="JThinButton">
       <HintPath>..\..\..\..\Downloads\JThinButton.dll</HintPath>

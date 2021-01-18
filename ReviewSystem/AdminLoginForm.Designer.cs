@@ -77,10 +77,10 @@ namespace ReviewSystem
             this.btnFeedback.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFeedback.BackgroundImage")));
             this.btnFeedback.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFeedback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFeedback.Location = new System.Drawing.Point(633, 503);
+            this.btnFeedback.Location = new System.Drawing.Point(633, 502);
             this.btnFeedback.Name = "btnFeedback";
             this.btnFeedback.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnFeedback.Size = new System.Drawing.Size(137, 50);
+            this.btnFeedback.Size = new System.Drawing.Size(137, 51);
             this.btnFeedback.TabIndex = 7;
             this.btnFeedback.Text = "Feed back";
             this.btnFeedback.UseVisualStyleBackColor = true;

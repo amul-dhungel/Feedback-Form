@@ -19,3 +19,7 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\FlatButton.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JTextBox.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JThinButton.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JImageButton.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JDragControl.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JMaterialTextbox.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JMetroTextBox.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JTextBox2.dll

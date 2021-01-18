@@ -104,13 +104,13 @@ namespace ReviewSystem
             try
             {
 
-                if (validator == false || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtNumber.Text) || string.IsNullOrEmpty(txtName.Text))
+                if (validator == false || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtName.Text))
                 {
                 
                     MessageBox.Show("Feedback Submitted");
                     r.CustomerName = txtName.Text;
                     r.CustomerEmail = txtEmail.Text;
-                    r.CustomerNumber = txtNumber.Text;
+                    r.CustomerNumber = txtName.Text;
                     DateTime date = DateTime.Now;  //get current datetime 
                     r.date = date.ToString("yyyy - MM - dd");
 
@@ -146,20 +146,10 @@ namespace ReviewSystem
         {
             txtName.Text = "";
             txtEmail.Text = "";
-            txtNumber.Text = "";
+            txtName.Text = "";
             // dataGridView1.CurrentCell.Value = false;
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         // binding data table into data grid
         private void BindGrid()
@@ -386,10 +376,7 @@ namespace ReviewSystem
             ClearForm();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void CustomerReview_Load(object sender, EventArgs e)
         {
@@ -429,6 +416,9 @@ namespace ReviewSystem
             }
         }
 
+
+
+
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             string pattern = @"^([A-Z][a-z-A-z]+)$";
@@ -444,6 +434,8 @@ namespace ReviewSystem
                 validator = true;
             }
         }
+
+
     }
 } 
     

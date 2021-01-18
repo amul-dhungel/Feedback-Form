@@ -48,12 +48,18 @@ namespace ReviewSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSuggestions = new System.Windows.Forms.TextBox();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -70,14 +76,16 @@ namespace ReviewSystem
             // 
             // btnClearForm
             // 
+            this.btnClearForm.BackColor = System.Drawing.Color.OrangeRed;
             this.btnClearForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearForm.Location = new System.Drawing.Point(282, 503);
+            this.btnClearForm.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClearForm.Location = new System.Drawing.Point(419, 535);
             this.btnClearForm.Name = "btnClearForm";
-            this.btnClearForm.Size = new System.Drawing.Size(94, 34);
+            this.btnClearForm.Size = new System.Drawing.Size(129, 50);
             this.btnClearForm.TabIndex = 7;
             this.btnClearForm.Text = "Clear";
-            this.btnClearForm.UseVisualStyleBackColor = true;
+            this.btnClearForm.UseVisualStyleBackColor = false;
             this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
             // dataGridView1
@@ -87,21 +95,26 @@ namespace ReviewSystem
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(739, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(739, 276);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSubmit.Location = new System.Drawing.Point(169, 503);
+            this.btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.btnSubmit.Location = new System.Drawing.Point(255, 535);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(95, 34);
+            this.btnSubmit.Size = new System.Drawing.Size(120, 51);
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // errorProvider1
@@ -112,6 +125,8 @@ namespace ReviewSystem
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.txtSuggestions);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -119,10 +134,8 @@ namespace ReviewSystem
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Controls.Add(this.txtNumber);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.btnClearForm);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 633);
@@ -168,7 +181,7 @@ namespace ReviewSystem
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(91, 399);
+            this.label3.Location = new System.Drawing.Point(101, 399);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 27);
             this.label3.TabIndex = 14;
@@ -225,8 +238,12 @@ namespace ReviewSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lblTimer);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.btnSubmit);
+            this.panel2.Controls.Add(this.btnClearForm);
             this.panel2.Location = new System.Drawing.Point(414, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(752, 630);
@@ -253,6 +270,55 @@ namespace ReviewSystem
             this.label6.TabIndex = 0;
             this.label6.Text = "Send us your feedback !";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(43, 472);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 27);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Suggestions";
+            // 
+            // txtSuggestions
+            // 
+            this.txtSuggestions.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuggestions.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSuggestions.Location = new System.Drawing.Point(179, 472);
+            this.txtSuggestions.Multiline = true;
+            this.txtSuggestions.Name = "txtSuggestions";
+            this.txtSuggestions.Size = new System.Drawing.Size(184, 114);
+            this.txtSuggestions.TabIndex = 19;
+            this.txtSuggestions.Text = "Optional";
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTimer.Location = new System.Drawing.Point(413, 106);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(135, 35);
+            this.lblTimer.TabIndex = 11;
+            this.lblTimer.Text = "Date Time";
+            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(207, 440);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(376, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // CustomerReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,8 +338,10 @@ namespace ReviewSystem
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +364,10 @@ namespace ReviewSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSuggestions;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

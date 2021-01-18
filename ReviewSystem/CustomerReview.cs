@@ -94,6 +94,7 @@ namespace ReviewSystem
         {
             InitializeComponent();
             BindGrid();
+            timer1.Start();
         }
         FeedBackRatingVariables o = new FeedBackRatingVariables();
         FeedbackClass r = new FeedbackClass();
@@ -435,7 +436,17 @@ namespace ReviewSystem
             }
         }
 
+        // current date and time in form
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.lblTimer.Text = dateTime.ToString();
+        }
+        // showing date and time on form
+        private void lblTimer_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 } 
     

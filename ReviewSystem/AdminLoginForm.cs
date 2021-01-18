@@ -49,5 +49,22 @@ namespace ReviewSystem
             CustomerReview obj = new CustomerReview();
             obj.Show();
         }
+
+        private void LoginForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+    
     }
 }

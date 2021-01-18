@@ -15,3 +15,6 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.cspr
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.CustomerReview.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Report.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Graph.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\FlatButton.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JTextBox.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JThinButton.dll

@@ -36,6 +36,9 @@
     <Reference Include="FlatButton">
       <HintPath>..\..\..\..\Downloads\FlatButton.dll</HintPath>
     </Reference>
+    <Reference Include="JImageButton">
+      <HintPath>..\..\..\..\Downloads\JImageButton.dll</HintPath>
+    </Reference>
     <Reference Include="JTextBox">
       <HintPath>..\..\..\..\Downloads\JTextBox.dll</HintPath>
     </Reference>

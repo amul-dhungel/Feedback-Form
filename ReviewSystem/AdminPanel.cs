@@ -200,5 +200,10 @@ namespace ReviewSystem
             Graph obj = new Graph(); // moving to graph panel window
             obj.Show();
         }
+
+        private void AdminPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

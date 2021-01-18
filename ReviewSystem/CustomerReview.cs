@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -96,37 +97,46 @@ namespace ReviewSystem
         }
         FeedBackRatingVariables o = new FeedBackRatingVariables();
         FeedbackClass r = new FeedbackClass();
-        private void button1_Click(object sender, EventArgs e)
+         bool validator = true;
+        // submit button method
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-            
 
-                r.CustomerName = txtName.Text;
-                r.CustomerEmail = txtEmail.Text;
-                r.CustomerNumber = txtNumber.Text;
-                DateTime date = DateTime.Now;  //get current datetime 
-                r.date = date.ToString("yyyy - MM - dd");
-
-                string flag = r.Save(r);
-                if (flag == "Success")
+                if (validator == false || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtNumber.Text) || string.IsNullOrEmpty(txtName.Text))
                 {
-                    ClearForm();
-                    r.TotalRating = 0;
-                    o.good = 0;
-                    o.dissastisfied = 0;
-                    o.average = 0;
-                    o.excellent = 0;
-                    
-                }
+                
+                    MessageBox.Show("Feedback Submitted");
+                    r.CustomerName = txtName.Text;
+                    r.CustomerEmail = txtEmail.Text;
+                    r.CustomerNumber = txtNumber.Text;
+                    DateTime date = DateTime.Now;  //get current datetime 
+                    r.date = date.ToString("yyyy - MM - dd");
 
+                    string flag = r.Save(r);
+
+                    if (flag == "Success")
+                    {
+                        ClearForm();
+                        r.TotalRating = 0;
+                        o.good = 0;
+                        o.dissastisfied = 0;
+                        o.average = 0;
+                        o.excellent = 0;
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect details foramt");
+                }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error occured ");
             }
-
 
 
         }
@@ -151,6 +161,7 @@ namespace ReviewSystem
 
         }
 
+        // binding data table into data grid
         private void BindGrid()
         {
             CustomerReviewClass obj = new CustomerReviewClass();
@@ -380,7 +391,59 @@ namespace ReviewSystem
 
         }
 
-      
+        private void CustomerReview_Load(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            // string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-2]{2,9})$";
+            string pattern = @"^\w+[\w-\.]+\@\w{5}\.[a-z]{2,3}$";
+            if (Regex.IsMatch(txtEmail.Text,pattern) || string.IsNullOrEmpty(txtEmail.Text))
+            {
+                errorProvider1.Clear();
+                validator = false;
+            }
+            else
+            {
+                
+                errorProvider1.SetError(this.txtEmail, "Please provide valid email address");
+                validator = true;
+            }
+        }
+
+        private void txtNumber_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^[7-9]{2}[0-9]{8}$";
+            if (Regex.IsMatch(txtNumber.Text, pattern) || string.IsNullOrEmpty(txtNumber.Text))
+            {
+                errorProvider1.Clear();
+                validator = false;
+            }
+            else
+            {
+
+                errorProvider1.SetError(this.txtNumber, "Please provide valid email address");
+                validator = true;
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^([A-Z][a-z-A-z]+)$";
+            if (Regex.IsMatch(txtName.Text, pattern) || string.IsNullOrEmpty(txtName.Text))
+            {
+                errorProvider1.Clear();
+                validator = false;
+            }
+            else
+            {
+
+                errorProvider1.SetError(this.txtName, "Please provide valid email address");
+                validator = true;
+            }
+        }
     }
 } 
     

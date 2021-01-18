@@ -29,14 +29,14 @@ namespace ReviewSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartreview = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartreview)).BeginInit();
@@ -44,37 +44,37 @@ namespace ReviewSystem
             // 
             // chartreview
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartreview.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartreview.Legends.Add(legend4);
+            chartArea3.Name = "ChartArea1";
+            this.chartreview.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartreview.Legends.Add(legend3);
             this.chartreview.Location = new System.Drawing.Point(28, 130);
             this.chartreview.Name = "chartreview";
             this.chartreview.Padding = new System.Windows.Forms.Padding(20);
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Series1";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Series2";
-            series21.ChartArea = "ChartArea1";
-            series21.Legend = "Legend1";
-            series21.Name = "Series3";
-            series22.ChartArea = "ChartArea1";
-            series22.Legend = "Legend1";
-            series22.Name = "Series4";
-            series23.ChartArea = "ChartArea1";
-            series23.Legend = "Legend1";
-            series23.Name = "Series5";
-            series24.ChartArea = "ChartArea1";
-            series24.Legend = "Legend1";
-            series24.Name = "Series6";
-            this.chartreview.Series.Add(series19);
-            this.chartreview.Series.Add(series20);
-            this.chartreview.Series.Add(series21);
-            this.chartreview.Series.Add(series22);
-            this.chartreview.Series.Add(series23);
-            this.chartreview.Series.Add(series24);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Series2";
+            series15.ChartArea = "ChartArea1";
+            series15.Legend = "Legend1";
+            series15.Name = "Series3";
+            series16.ChartArea = "ChartArea1";
+            series16.Legend = "Legend1";
+            series16.Name = "Series4";
+            series17.ChartArea = "ChartArea1";
+            series17.Legend = "Legend1";
+            series17.Name = "Series5";
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Series6";
+            this.chartreview.Series.Add(series13);
+            this.chartreview.Series.Add(series14);
+            this.chartreview.Series.Add(series15);
+            this.chartreview.Series.Add(series16);
+            this.chartreview.Series.Add(series17);
+            this.chartreview.Series.Add(series18);
             this.chartreview.Size = new System.Drawing.Size(751, 286);
             this.chartreview.TabIndex = 0;
             this.chartreview.Text = "Chart";
@@ -85,7 +85,11 @@ namespace ReviewSystem
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Food Quality",
-            "Value For Money"});
+            "Value For Money",
+            "Staff Friendliness",
+            "Cleanliness",
+            "Order Accuracy",
+            "Restaurant Ambainance"});
             this.comboBox1.Location = new System.Drawing.Point(610, 49);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 24);
@@ -101,6 +105,7 @@ namespace ReviewSystem
             this.Controls.Add(this.chartreview);
             this.Name = "Graph";
             this.Text = "Graph";
+            this.Load += new System.EventHandler(this.Graph_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartreview)).EndInit();
             this.ResumeLayout(false);
 

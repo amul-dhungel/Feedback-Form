@@ -131,6 +131,7 @@ namespace ReviewSystem
             this.Controls.Add(this.txtCriteria);
             this.Name = "AdminPanel";
             this.Text = "Admin Panel";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

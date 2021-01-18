@@ -124,5 +124,10 @@ namespace ReviewSystem
             dataGridView1.DataSource = dt;
 
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

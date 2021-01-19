@@ -8,13 +8,10 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.cspr
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.exe
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.pdb
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.adminLoginForm.resources
-C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.adminPanel.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.csproj.CopyComplete
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.CustomerReview.resources
-C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Report.resources
-C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Graph.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\FlatButton.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JTextBox.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JThinButton.dll
@@ -23,3 +20,8 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JDragControl.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JMaterialTextbox.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JMetroTextBox.dll
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\bin\Debug\JTextBox2.dll
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Reports.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.AdminPanels.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.AdminDashboard.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Graphs.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Home.resources

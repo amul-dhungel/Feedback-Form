@@ -17,7 +17,7 @@ namespace ReviewSystem
         // fetching columns
         public List<string> ListCriteria()
         {
-            string d = AdminPanel.Utility.ReadFromTextFile(_filePathCriteria);
+            string d = AdminPanels.Utility.ReadFromTextFile(_filePathCriteria);
             if (d != null)
             {
                 List<string> lst = d.Split(',').ToList();
@@ -29,7 +29,7 @@ namespace ReviewSystem
         // fetching rows
         public List<string> ListRating()
         {
-            string d = AdminPanel.Utility.ReadFromTextFile(_filePathRating);
+            string d = AdminPanels.Utility.ReadFromTextFile(_filePathRating);
             if (d != null)
             {
                 List<string> lst = d.Split(',').ToList();

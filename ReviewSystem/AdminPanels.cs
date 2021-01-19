@@ -11,9 +11,8 @@ using System.Windows.Forms;
 
 namespace ReviewSystem
 {
-    public partial class AdminPanel : Form
+    public partial class AdminPanels : UserControl
     {
-        // creating utitlity class for stream methods
         public class Utility
         {
             public static void WriteToTextFile(string path, string data, bool append = true, int count = 1)
@@ -63,25 +62,25 @@ namespace ReviewSystem
 
             // convert to data table
 
-            public static DataTable ConvertToDataTable<T>(IList<T> data,IList<T> data1)
+            public static DataTable ConvertToDataTable<T>(IList<T> data, IList<T> data1)
             {
-              
+
                 DataTable table = new DataTable();
                 table.Columns.Add("Criterias");
- 
+
                 for (int i = 0; i < data.Count; i++)
                 {
                     Console.WriteLine(data[0].ToString());
-                    
+
                     table.Rows.Add(data[i].ToString());
-                   
+
                 }
 
                 for (int i = 0; i < data1.Count; i++)
                 {
                     table.Columns.Add(data1[i].ToString());
                 }
-         
+
                 return table;
             }
 
@@ -100,15 +99,13 @@ namespace ReviewSystem
                 return table;
             }
         }
-            public AdminPanel()
+        public AdminPanels()
         {
             InitializeComponent();
-            
             // adding criteria column when the form loads for the first time
             table.Columns.Add("Criteria");
             dataGridView1.DataSource = table;
         }
-
         DataTable table = new DataTable(); // data table
 
         // button method to add criteria
@@ -130,7 +127,8 @@ namespace ReviewSystem
                     ClearForm();
                 }
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Error occured : " + ex);
             }
         }
@@ -144,7 +142,7 @@ namespace ReviewSystem
                 string flag = adminPanelClass.SaveRating(adminPanelClass);
 
                 // table view of the criteria type
-                
+
                 table.Columns.Add(txtRating.Text);
                 dataGridView1.DataSource = table;
 
@@ -159,16 +157,13 @@ namespace ReviewSystem
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            BindGrid();
-        }
+    
         // method is clear all data in form
         public void ClearForm()
         {
             txtCriteria.Text = " ";
             txtRating.Text = " ";
-          
+
         }
 
         // Bind the data in grid method
@@ -177,33 +172,25 @@ namespace ReviewSystem
             AdminPanelClass obj = new AdminPanelClass();
             List<string> listReviewCriteria = obj.ListCriteria();
             List<string> listReviewRating = obj.ListRating();
-            DataTable dt = Utility.ConvertToDataTable(listReviewCriteria,listReviewRating);
+            DataTable dt = Utility.ConvertToDataTable(listReviewCriteria, listReviewRating);
             dataGridView1.DataSource = dt;
 
         }
 
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void btnReport_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Report obj = new Report(); // moving to table panel window
-            obj.Show();
+
         }
 
-        private void btnGraph_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            Graph obj = new Graph(); // moving to graph panel window
-            obj.Show();
-        }
-
-        private void AdminPanel_Load(object sender, EventArgs e)
-        {
-
+            BindGrid();
         }
     }
 }

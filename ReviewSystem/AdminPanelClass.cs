@@ -19,7 +19,7 @@ namespace ReviewSystem
         {
             //string data = JsonConvert.SerializeObject(r.Criteria, Formatting.None);
            string data = r.Criteria;
-            AdminPanel.Utility.WriteToTextFile(_filePathCriteria, data);
+            AdminPanels.Utility.WriteToTextFile(_filePathCriteria, data);
             return "Success";
         }
         // initilazing function to write data in rating Json file.
@@ -27,14 +27,14 @@ namespace ReviewSystem
         {
             //string data = JsonConvert.SerializeObject(r.Rating, Formatting.None);
             string data = r.Rating;
-            AdminPanel.Utility.WriteToTextFile(_filePathRating, data);
+            AdminPanels.Utility.WriteToTextFile(_filePathRating, data);
             return "Success";
         }
 
         // Read data in the form of list
         public List<string> ListCriteria()
         {
-            string d = AdminPanel.Utility.ReadFromTextFile(_filePathCriteria);
+            string d = AdminPanels.Utility.ReadFromTextFile(_filePathCriteria);
             if (d != null)
             {
                 List<string> lst = d.Split(',').ToList();
@@ -45,7 +45,7 @@ namespace ReviewSystem
 
         public List<string> ListRating()
         {
-            string d = AdminPanel.Utility.ReadFromTextFile(_filePathRating);
+            string d = AdminPanels.Utility.ReadFromTextFile(_filePathRating);
             if (d != null)
             {
                 List<string> lst = d.Split(',').ToList();

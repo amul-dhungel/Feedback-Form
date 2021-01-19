@@ -27,7 +27,7 @@ namespace ReviewSystem
 
             if (username == "admin" && password == "admin")
             {
-                AdminPanel obj = new AdminPanel(); // navigating to admin panel window
+                AdminDashboard obj = new AdminDashboard(); // navigating to admin panel window
                 obj.Show();
 
             }

@@ -74,19 +74,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminLoginForm.Designer.cs">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminPanel.Designer.cs">
-      <DependentUpon>AdminPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminPanelClass.cs" />
+    <Compile Include="AdminPanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPanels.Designer.cs">
+      <DependentUpon>AdminPanels.cs</DependentUpon>
+    </Compile>
     <Compile Include="FeedBackRatingVariables.cs" />
     <Compile Include="FeedbackClass.cs" />
     <Compile Include="CustomerReviewClass.cs" />
@@ -96,31 +102,43 @@
     <Compile Include="CustomerReview.Designer.cs">
       <DependentUpon>CustomerReview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graph.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Graphs.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Graph.Designer.cs">
-      <DependentUpon>Graph.cs</DependentUpon>
+    <Compile Include="Graphs.Designer.cs">
+      <DependentUpon>Graphs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPanel.resx">
-      <DependentUpon>AdminPanel.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPanels.resx">
+      <DependentUpon>AdminPanels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerReview.resx">
       <DependentUpon>CustomerReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Graph.resx">
-      <DependentUpon>Graph.cs</DependentUpon>
+    <EmbeddedResource Include="Graphs.resx">
+      <DependentUpon>Graphs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,8 +149,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

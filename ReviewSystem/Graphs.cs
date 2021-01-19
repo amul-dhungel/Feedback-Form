@@ -10,22 +10,14 @@ using System.Windows.Forms;
 
 namespace ReviewSystem
 {
-    public partial class Graph : Form
+    public partial class Graphs : UserControl
     {
-        public Graph()
+        public Graphs()
         {
             InitializeComponent();
-           
         }
-
-        private void chart_Click(object sender, EventArgs e)
+        private void BindchartFoodQuality(List<FeedbackClass> lst)
         {
-
-        }
-
-        // chart for food review
-          private void BindchartFoodQuality(List<FeedbackClass> lst)
-        { 
             if (lst != null)
             {
                 var result = lst
@@ -36,7 +28,7 @@ namespace ReviewSystem
                         Count = c1.Count().ToString()
                     }).ToList();
 
-                DataTable dt = Report.Utility.ConvertToDataTable(result);
+                DataTable dt = Reports.Utility.ConvertToDataTable(result);
                 chartreview.DataSource = dt;
                 chartreview.Name = "FoodQuality";
                 chartreview.Series["Series1"].XValueMember = "FoodQuality";
@@ -64,7 +56,7 @@ namespace ReviewSystem
                         Count = c1.Count().ToString()
                     }).ToList();
 
-                DataTable dt = Report.Utility.ConvertToDataTable(result);
+                DataTable dt = Reports.Utility.ConvertToDataTable(result);
                 chartreview.DataSource = dt;
                 chartreview.Name = "StaffFriendliness";
                 chartreview.Series["Series2"].XValueMember = "StaffFriendliness";
@@ -92,7 +84,7 @@ namespace ReviewSystem
                         Count = c1.Count().ToString()
                     }).ToList();
 
-                DataTable dt = Report.Utility.ConvertToDataTable(result);
+                DataTable dt = Reports.Utility.ConvertToDataTable(result);
                 chartreview.DataSource = dt;
                 chartreview.Name = "ValueForMoney";
                 chartreview.Series["Series3"].XValueMember = "ValueForMoney";
@@ -119,7 +111,7 @@ namespace ReviewSystem
                         Count = c1.Count().ToString()
                     }).ToList();
 
-                DataTable dt = Report.Utility.ConvertToDataTable(result);
+                DataTable dt = Reports.Utility.ConvertToDataTable(result);
                 chartreview.DataSource = dt;
                 chartreview.Name = "Cleanliness";
                 chartreview.Series["Series4"].XValueMember = "Cleanliness";
@@ -146,7 +138,7 @@ namespace ReviewSystem
                         Count = c1.Count().ToString()
                     }).ToList();
 
-                DataTable dt = Report.Utility.ConvertToDataTable(result);
+                DataTable dt = Reports.Utility.ConvertToDataTable(result);
                 chartreview.DataSource = dt;
                 chartreview.Name = "Cleanliness";
                 chartreview.Series["Series5"].XValueMember = "OrderAccuracy";
@@ -160,44 +152,47 @@ namespace ReviewSystem
             }
         }
         FeedbackClass obj = new FeedbackClass();
-       
+        // chart for food review
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void chartreview_Click(object sender, EventArgs e)
         {
-            try
-            {
-                List<FeedbackClass> listReview = obj.List();
-                string selected = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
-                if (selected == "Food Quality")
-                {
-                    BindchartFoodQuality(listReview);
-                }
-                if (selected == "Staff Friendliness")
-                {
-                    BindchartStaffFriendliness(listReview);
-                }
-                if(selected == "Value For Money")
-                {
-                    BindchartValueForMoney(listReview);
-                }
-                if (selected == "Cleanliness")
-                {
-                    BindchartCleanliness(listReview);
-                }
-                if (selected == "Order Accuracy")
-                {
-                    BindchartOrderAccuracy(listReview);
-                }
-            }
-            catch(Exception ex)
-            {
 
-            }
         }
 
-        private void Graph_Load(object sender, EventArgs e)
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            {
+                try
+                {
+                    List<FeedbackClass> listReview = obj.List();
+                    string selected = this.comboBox.GetItemText(this.comboBox.SelectedItem);
+                    if (selected == "Food Quality")
+                    {
+                        BindchartFoodQuality(listReview);
+                    }
+                    if (selected == "Staff Friendliness")
+                    {
+                        BindchartStaffFriendliness(listReview);
+                    }
+                    if (selected == "Value For Money")
+                    {
+                        BindchartValueForMoney(listReview);
+                    }
+                    if (selected == "Cleanliness")
+                    {
+                        BindchartCleanliness(listReview);
+                    }
+                    if (selected == "Order Accuracy")
+                    {
+                        BindchartOrderAccuracy(listReview);
+                    }
+                }
+                catch (Exception ex)
+                {
 
+                }
+            }
         }
     }
 }

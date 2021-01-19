@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace ReviewSystem
 {
-    public partial class Report : Form
+    public partial class Reports : UserControl
     {
+
         public class Utility
         {
 
@@ -55,30 +56,21 @@ namespace ReviewSystem
                 return table;
             }
         }
-        public Report()
+        public Reports()
         {
             InitializeComponent();
             BindGrid();
         }
 
-       
+        //binding data with table 
 
         private void BindGrid()
         {
             FeedbackClass obj = new FeedbackClass();
             List<FeedbackClass> listReview = obj.List();
-            Console.WriteLine(listReview.ToList());
             DataTable dt = Utility.ConvertToDataTable(listReview);
-            dataGridView1.DataSource = dt;
+            dataGridReport.DataSource = dt;
         }
-
-      
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnSort_Click(object sender, EventArgs e)
         {
             FeedbackClass obj = new FeedbackClass();
@@ -106,7 +98,9 @@ namespace ReviewSystem
                         arr1[j + 1] = temp;
                     }
                 }
+
             }
+
             List<FeedbackClass> listStudents2 = new List<FeedbackClass>();
             for (int i = 0; i < arr1.Length; i++)
             {
@@ -121,13 +115,14 @@ namespace ReviewSystem
                 }
             }
             DataTable dt = Utility.ConvertToDataTable(listStudents2);
-            dataGridView1.DataSource = dt;
+            dataGridReport.DataSource = dt;
 
         }
 
-        private void Report_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
+
+
+
+    

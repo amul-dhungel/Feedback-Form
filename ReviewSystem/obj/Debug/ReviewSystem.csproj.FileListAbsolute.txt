@@ -25,3 +25,4 @@ C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Admi
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.AdminDashboard.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Graphs.resources
 C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Home.resources
+C:\Users\Acer\source\repos\ReviewSystem\ReviewSystem\obj\Debug\ReviewSystem.Loader.resources

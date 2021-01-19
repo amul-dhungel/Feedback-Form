@@ -37,6 +37,8 @@ namespace ReviewSystem
             this.btnSubmit = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSuggestions = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,20 +48,20 @@ namespace ReviewSystem
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSuggestions = new System.Windows.Forms.TextBox();
-            this.lblTimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -80,7 +82,7 @@ namespace ReviewSystem
             this.btnClearForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClearForm.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClearForm.Location = new System.Drawing.Point(419, 535);
+            this.btnClearForm.Location = new System.Drawing.Point(419, 519);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(129, 50);
             this.btnClearForm.TabIndex = 7;
@@ -109,7 +111,7 @@ namespace ReviewSystem
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.btnSubmit.Location = new System.Drawing.Point(255, 535);
+            this.btnSubmit.Location = new System.Drawing.Point(266, 518);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 51);
             this.btnSubmit.TabIndex = 10;
@@ -140,6 +142,29 @@ namespace ReviewSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 633);
             this.panel1.TabIndex = 11;
+            // 
+            // txtSuggestions
+            // 
+            this.txtSuggestions.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuggestions.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSuggestions.Location = new System.Drawing.Point(179, 455);
+            this.txtSuggestions.Multiline = true;
+            this.txtSuggestions.Name = "txtSuggestions";
+            this.txtSuggestions.Size = new System.Drawing.Size(184, 114);
+            this.txtSuggestions.TabIndex = 19;
+            this.txtSuggestions.Text = "Optional";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(43, 472);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 27);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Suggestions";
             // 
             // pictureBox1
             // 
@@ -249,9 +274,32 @@ namespace ReviewSystem
             this.panel2.Size = new System.Drawing.Size(752, 630);
             this.panel2.TabIndex = 12;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(207, 440);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(376, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTimer.Location = new System.Drawing.Point(413, 106);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(135, 35);
+            this.lblTimer.TabIndex = 11;
+            this.lblTimer.Text = "Date Time";
+            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
+            // 
             // panel3
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.Controls.Add(this.picClose);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -270,54 +318,21 @@ namespace ReviewSystem
             this.label6.TabIndex = 0;
             this.label6.Text = "Send us your feedback !";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(43, 472);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 27);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Suggestions";
-            // 
-            // txtSuggestions
-            // 
-            this.txtSuggestions.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuggestions.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSuggestions.Location = new System.Drawing.Point(179, 472);
-            this.txtSuggestions.Multiline = true;
-            this.txtSuggestions.Name = "txtSuggestions";
-            this.txtSuggestions.Size = new System.Drawing.Size(184, 114);
-            this.txtSuggestions.TabIndex = 19;
-            this.txtSuggestions.Text = "Optional";
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTimer.Location = new System.Drawing.Point(413, 106);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(135, 35);
-            this.lblTimer.TabIndex = 11;
-            this.lblTimer.Text = "Date Time";
-            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox2
+            // picClose
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(207, 440);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(376, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
+            this.picClose.Location = new System.Drawing.Point(712, 3);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(37, 32);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 14;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // CustomerReview
             // 
@@ -330,6 +345,7 @@ namespace ReviewSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerReview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Review";
             this.Load += new System.EventHandler(this.CustomerReview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -339,9 +355,10 @@ namespace ReviewSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +386,6 @@ namespace ReviewSystem
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picClose;
     }
 }

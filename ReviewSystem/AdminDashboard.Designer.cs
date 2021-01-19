@@ -40,6 +40,7 @@ namespace ReviewSystem
             this.graphs1 = new ReviewSystem.Graphs();
             this.adminPanels1 = new ReviewSystem.AdminPanels();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.jFlatButton1 = new FlatButton.JFlatButton();
             this.pnlSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,14 +48,15 @@ namespace ReviewSystem
             // pnlSetting
             // 
             this.pnlSetting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSetting.BackgroundImage")));
+            this.pnlSetting.Controls.Add(this.jFlatButton1);
             this.pnlSetting.Controls.Add(this.pictureBox1);
             this.pnlSetting.Controls.Add(this.pnlHome);
             this.pnlSetting.Controls.Add(this.btnGraphs);
             this.pnlSetting.Controls.Add(this.btnReports);
             this.pnlSetting.Controls.Add(this.btnAddFormDetails);
-            this.pnlSetting.Location = new System.Drawing.Point(-3, -4);
+            this.pnlSetting.Location = new System.Drawing.Point(-1, -1);
             this.pnlSetting.Name = "pnlSetting";
-            this.pnlSetting.Size = new System.Drawing.Size(207, 588);
+            this.pnlSetting.Size = new System.Drawing.Size(205, 585);
             this.pnlSetting.TabIndex = 0;
             this.pnlSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSetting_Paint);
             // 
@@ -193,6 +195,34 @@ namespace ReviewSystem
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // jFlatButton1
+            // 
+            this.jFlatButton1.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.jFlatButton1.BackgroundColor = System.Drawing.Color.PaleVioletRed;
+            this.jFlatButton1.ButtonText = "Logout";
+            this.jFlatButton1.CausesValidation = false;
+            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
+            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
+            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ImageLeft")));
+            this.jFlatButton1.ImageRight = null;
+            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Location = new System.Drawing.Point(16, 455);
+            this.jFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jFlatButton1.Name = "jFlatButton1";
+            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Size = new System.Drawing.Size(168, 53);
+            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton1.TabIndex = 4;
+            this.jFlatButton1.Click += new System.EventHandler(this.jFlatButton1_Click);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,6 +235,7 @@ namespace ReviewSystem
             this.Controls.Add(this.pnlSetting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.pnlSetting.ResumeLayout(false);
@@ -225,5 +256,6 @@ namespace ReviewSystem
         private Graphs graphs1;
         private AdminPanels adminPanels1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FlatButton.JFlatButton jFlatButton1;
     }
 }

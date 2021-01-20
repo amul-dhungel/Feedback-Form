@@ -51,7 +51,7 @@ namespace ReviewSystem
             this.btnAddCriteria.Name = "btnAddCriteria";
             this.btnAddCriteria.Size = new System.Drawing.Size(139, 38);
             this.btnAddCriteria.TabIndex = 2;
-            this.btnAddCriteria.Text = "AddCriteria";
+            this.btnAddCriteria.Text = "AddRating";
             this.btnAddCriteria.UseVisualStyleBackColor = true;
             this.btnAddCriteria.Click += new System.EventHandler(this.btnAddCriteria_Click);
             // 

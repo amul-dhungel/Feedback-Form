@@ -15,6 +15,8 @@ namespace ReviewSystem
         public Graphs()
         {
             InitializeComponent();
+
+           
         }
         private void BindchartFoodQuality(List<FeedbackClass> lst)
         {

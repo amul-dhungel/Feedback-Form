@@ -33,5 +33,10 @@ namespace ReviewSystem
                 obj.Show();
             }
         }
+
+        private void Loader_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

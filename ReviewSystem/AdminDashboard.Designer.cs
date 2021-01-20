@@ -31,6 +31,8 @@ namespace ReviewSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.pnlSetting = new System.Windows.Forms.Panel();
+            this.jFlatButton1 = new FlatButton.JFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.btnGraphs = new FlatButton.JFlatButton();
             this.btnReports = new FlatButton.JFlatButton();
@@ -39,8 +41,6 @@ namespace ReviewSystem
             this.home1 = new ReviewSystem.Home();
             this.graphs1 = new ReviewSystem.Graphs();
             this.adminPanels1 = new ReviewSystem.AdminPanels();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.jFlatButton1 = new FlatButton.JFlatButton();
             this.pnlSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,45 @@ namespace ReviewSystem
             this.pnlSetting.Size = new System.Drawing.Size(205, 585);
             this.pnlSetting.TabIndex = 0;
             this.pnlSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSetting_Paint);
+            // 
+            // jFlatButton1
+            // 
+            this.jFlatButton1.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.jFlatButton1.BackgroundColor = System.Drawing.Color.PaleVioletRed;
+            this.jFlatButton1.ButtonText = "Logout";
+            this.jFlatButton1.CausesValidation = false;
+            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
+            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
+            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ImageLeft")));
+            this.jFlatButton1.ImageRight = null;
+            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Location = new System.Drawing.Point(16, 455);
+            this.jFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jFlatButton1.Name = "jFlatButton1";
+            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Size = new System.Drawing.Size(168, 53);
+            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton1.TabIndex = 4;
+            this.jFlatButton1.Click += new System.EventHandler(this.jFlatButton1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(46, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlHome
             // 
@@ -181,47 +220,8 @@ namespace ReviewSystem
             this.adminPanels1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.adminPanels1.Location = new System.Drawing.Point(200, -1);
             this.adminPanels1.Name = "adminPanels1";
-            this.adminPanels1.Size = new System.Drawing.Size(882, 551);
+            this.adminPanels1.Size = new System.Drawing.Size(884, 554);
             this.adminPanels1.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(46, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // jFlatButton1
-            // 
-            this.jFlatButton1.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.jFlatButton1.BackgroundColor = System.Drawing.Color.PaleVioletRed;
-            this.jFlatButton1.ButtonText = "Logout";
-            this.jFlatButton1.CausesValidation = false;
-            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
-            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
-            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ImageLeft")));
-            this.jFlatButton1.ImageRight = null;
-            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Location = new System.Drawing.Point(16, 455);
-            this.jFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jFlatButton1.Name = "jFlatButton1";
-            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Size = new System.Drawing.Size(168, 53);
-            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton1.TabIndex = 4;
-            this.jFlatButton1.Click += new System.EventHandler(this.jFlatButton1_Click);
             // 
             // AdminDashboard
             // 
@@ -254,8 +254,8 @@ namespace ReviewSystem
         private Reports reports1;
         private Home home1;
         private Graphs graphs1;
-        private AdminPanels adminPanels1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FlatButton.JFlatButton jFlatButton1;
+        private AdminPanels adminPanels1;
     }
 }

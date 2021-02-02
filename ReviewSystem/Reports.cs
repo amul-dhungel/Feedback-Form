@@ -80,7 +80,6 @@ namespace ReviewSystem
             DateTime[] arr1 = new DateTime[listStudents.Count];
             for (int i = 0; i < listStudents.Count; i++)
             {
-                var id = listStudents[i].TotalRating;
                 var date = listStudents[i].date;
                 oDate = DateTime.Parse(date);
                 arr1[i] = oDate;
@@ -98,9 +97,7 @@ namespace ReviewSystem
                         arr1[j + 1] = temp;
                     }
                 }
-
             }
-
             List<FeedbackClass> listStudents2 = new List<FeedbackClass>();
             for (int i = 0; i < arr1.Length; i++)
             {
@@ -116,7 +113,6 @@ namespace ReviewSystem
             }
             DataTable dt = Utility.ConvertToDataTable(listStudents2);
             dataGridReport.DataSource = dt;
-
         }
 
     }

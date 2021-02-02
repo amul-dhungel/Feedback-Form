@@ -222,6 +222,7 @@ namespace ReviewSystem
             this.adminPanels1.Name = "adminPanels1";
             this.adminPanels1.Size = new System.Drawing.Size(884, 554);
             this.adminPanels1.TabIndex = 4;
+            this.adminPanels1.Load += new System.EventHandler(this.adminPanels1_Load);
             // 
             // AdminDashboard
             // 

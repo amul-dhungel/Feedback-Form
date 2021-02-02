@@ -39,6 +39,7 @@ namespace ReviewSystem
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,6 +81,7 @@ namespace ReviewSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, 473);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 18);
@@ -88,7 +90,7 @@ namespace ReviewSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(109)))), ((int)(((byte)(137)))));
-            this.panel2.Location = new System.Drawing.Point(1, 473);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(42, 18);
             this.panel2.TabIndex = 5;
@@ -118,7 +120,6 @@ namespace ReviewSystem
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(811, 491);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -129,6 +130,7 @@ namespace ReviewSystem
             this.Text = "Loader";
             this.Load += new System.EventHandler(this.Loader_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

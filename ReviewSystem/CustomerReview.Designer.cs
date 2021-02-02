@@ -51,9 +51,9 @@ namespace ReviewSystem
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.picClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -306,6 +306,18 @@ namespace ReviewSystem
             this.panel3.Size = new System.Drawing.Size(752, 70);
             this.panel3.TabIndex = 9;
             // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
+            this.picClose.Location = new System.Drawing.Point(712, 3);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(37, 32);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 14;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -321,18 +333,6 @@ namespace ReviewSystem
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.Transparent;
-            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
-            this.picClose.Location = new System.Drawing.Point(712, 3);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(37, 32);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 14;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // CustomerReview
             // 

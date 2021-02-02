@@ -119,6 +119,7 @@ namespace ReviewSystem
 
                     if (flag == "Success")
                     {
+                        MessageBox.Show("Feedback Successfully Submitted. Thank you !");
                         ClearForm();
                         r.TotalRating = 0;
                         o.good = 0;
@@ -412,7 +413,7 @@ namespace ReviewSystem
             else
             {
 
-                errorProvider1.SetError(this.txtNumber, "Please provide valid email address");
+                errorProvider1.SetError(this.txtNumber, "Please provide valid phone number");
                 validator = true;
             }
         }
@@ -431,7 +432,7 @@ namespace ReviewSystem
             else
             {
 
-                errorProvider1.SetError(this.txtName, "Please provide valid email address");
+                errorProvider1.SetError(this.txtName, "Please provide valid Name format");
                 validator = true;
             }
         }

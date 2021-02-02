@@ -72,5 +72,10 @@ namespace ReviewSystem
         {
             this.Close();
         }
+
+        private void adminPanels1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
